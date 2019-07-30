@@ -1,8 +1,12 @@
 <?php 
-$random_number_array = range(0, 100);
-shuffle($random_number_array );
-$random_number_array = array_slice($random_number_array ,0,10);
+$randomArray2 = [];
 
-$someJSON = json_encode($random_number_array);
-  echo $someJSON;
+for ($i=0; $i < 10 ; $i++) {
+$randomNumber1 = mt_rand(0, 10);
+$genArray1 = [$i, $randomNumber1];
+array_push($randomArray2, $genArray1);
+
+}
+
+echo json_encode($randomArray2);
 ?>
