@@ -1,12 +1,16 @@
-<?php 
-$randomArray2 = [];
+<?php
 
-for ($i=0; $i < 10 ; $i++) {
-$randomNumber1 = mt_rand(0, 10);
-$genArray1 = [$i, $randomNumber1];
-array_push($randomArray2, $genArray1);
+header('Content-Type: application/json');
 
+$randomArray = [];
+
+for ($i = 0; $i <= $_GET['length'] ; $i++){
+$randomNumber = mt_rand(0,20);
+$genArray = [$i, $randomNumber];
+array_push($randomArray, $genArray);
 }
 
-echo json_encode($randomArray2);
+echo json_encode($randomArray);
+
+
 ?>
